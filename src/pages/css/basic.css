@@ -117,7 +117,7 @@ html, body{
 }
 
 .custom-container {
-  max-width: 1700px; /* Például 1200px szélesség */
+  max-width: 225px; /* Például 1200px szélesség */
   width: 100%; /* Ez biztosítja, hogy teljes szélességet foglal el kisebb képernyőkön */
 }
 
