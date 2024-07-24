@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/zatrokcrow/static/css/main.fb4e672b.css",
-    "main.js": "/zatrokcrow/static/js/main.92e9e228.js",
+    "main.js": "/zatrokcrow/static/js/main.8dbe940c.js",
     "static/media/8.jpg": "/zatrokcrow/static/media/8.732af5244a30f74d420e.jpg",
     "static/media/16.jpg": "/zatrokcrow/static/media/16.cade16c14a7dfa71ae7f.jpg",
-    "static/media/3.jpg": "/zatrokcrow/static/media/3.4c439f4eba2f131302cd.jpg",
-    "static/media/2.jpg": "/zatrokcrow/static/media/2.2393df2bccdfe7c22bad.jpg",
+    "static/media/3.jpg": "/zatrokcrow/static/media/3.4548159bed0922e3f703.jpg",
+    "static/media/2.jpg": "/zatrokcrow/static/media/2.9fc811a70142ecfcee98.jpg",
     "static/media/22.jpg": "/zatrokcrow/static/media/22.e7d40bc177ee3f587f6e.jpg",
     "static/media/12.jpg": "/zatrokcrow/static/media/12.76775042b2172672f48e.jpg",
     "static/media/5.jpg": "/zatrokcrow/static/media/5.4bda859d5b09bc067c74.jpg",
     "static/media/20.jpg": "/zatrokcrow/static/media/20.971c453b39d3ec9b9a07.jpg",
-    "static/media/1.jpg": "/zatrokcrow/static/media/1.fbf23a453357345bb2a2.jpg",
+    "static/media/1.jpg": "/zatrokcrow/static/media/1.9683da1a240e2c804529.jpg",
     "static/media/11.jpg": "/zatrokcrow/static/media/11.7194e6c449f523fc1bb2.jpg",
     "static/media/18.jpg": "/zatrokcrow/static/media/18.a22be01e663fd1518d94.jpg",
     "static/media/13.jpg": "/zatrokcrow/static/media/13.56a7de112d4dd3069182.jpg",
@@ -30,16 +30,15 @@
     "static/media/27.jpg": "/zatrokcrow/static/media/27.ac25872e0aa3d8198ac0.jpg",
     "static/media/17.jpg": "/zatrokcrow/static/media/17.f8a2883251fa24ca9dee.jpg",
     "static/media/1.png": "/zatrokcrow/static/media/1.ceb66a792b866be5a347.png",
-    "static/media/2.png": "/zatrokcrow/static/media/2.b8c4a8c5f951422a8968.png",
     "static/media/crow.png": "/zatrokcrow/static/media/crow.e90ab3961f18fb45e285.png",
     "static/media/prev.png": "/zatrokcrow/static/media/prev.2e0cf9484cb1842bc4f6.png",
     "static/media/next.png": "/zatrokcrow/static/media/next.caef5202b04f526d1294.png",
     "index.html": "/zatrokcrow/index.html",
     "main.fb4e672b.css.map": "/zatrokcrow/static/css/main.fb4e672b.css.map",
-    "main.92e9e228.js.map": "/zatrokcrow/static/js/main.92e9e228.js.map"
+    "main.8dbe940c.js.map": "/zatrokcrow/static/js/main.8dbe940c.js.map"
   },
   "entrypoints": [
     "static/css/main.fb4e672b.css",
-    "static/js/main.92e9e228.js"
+    "static/js/main.8dbe940c.js"
   ]
 }
