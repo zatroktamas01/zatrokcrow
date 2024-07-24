@@ -1,35 +1,15 @@
-import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom'; // Importáld a Link komponenst
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function navbar() {
+
   return (
     <Navbar expand="lg" className="bg-light" fixed="top">
       <Container className="custom-container">
         <Navbar.Brand><span className="text-danger">Zátrok</span>Crow</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/"><span className='boldNavMenu'>Home</span></Nav.Link>
-            <Nav.Link as={Link} to="/about"><span className='boldNavMenu'>About Me</span></Nav.Link>
-            <Nav.Link as={Link} to="/portfolio"><span className='boldNavMenu'>Portfolio</span></Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
-}
-
-export default navbar;
-
-/*return <div>
-    
-  <Navbar expand="lg" className="bg-light" fixed="top">
-      <Container className="custom-container">
-        <Navbar.Brand><span className="text-danger">Zátrok</span>Crow</Navbar.Brand>
+        {/*
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
@@ -38,8 +18,14 @@ export default navbar;
             <Nav.Link href="#portfolio"><span className='boldNavMenu'>Portfolio</span></Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        */}
       </Container>
     </Navbar>
+  );
+
+
+  /*return <div>
+    
       
       <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
               <div className="container">
@@ -66,3 +52,6 @@ export default navbar;
           </div>
       </nav>
   </div>*/
+}
+
+export default navbar;

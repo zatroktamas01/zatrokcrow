@@ -1,7 +1,6 @@
 import Navbar from "./Navbar"
 import Slider from "./Slider"
 import Aboutsection from "./Aboutsection"
-import Servicesection from "./Servicessection"
 import Portfoliosection from "./Portfoliosection"
 import Footer from "./footer"
 
