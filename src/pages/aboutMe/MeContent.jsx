@@ -29,8 +29,7 @@ function MeContent() {
           </a>
 
           <br />
-          <a href="/Tamás_Zátrok_CV.pdf" target="_blank" className=".bg-dark">DOWNLOAD CV</a> /
-          <a href="/Zátrok_Tamás_Önéletrajz.pdf" target="_blank" className=".bg-dark">ÖNÉLETRAJZ</a>
+          <a href="https://drive.google.com/drive/folders/1MPYviDEXZHq9dUTHTIokmyce9_63IiBA?usp=drive_link" target="download" className=".bg-dark">DOWNLOAD CV</a> 
         </p>
 
 
