@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/zatrokcrow/static/css/main.fb4e672b.css",
-    "main.js": "/zatrokcrow/static/js/main.813124bb.js",
+    "main.js": "/zatrokcrow/static/js/main.efb9eea7.js",
     "static/media/8.jpg": "/zatrokcrow/static/media/8.732af5244a30f74d420e.jpg",
     "static/media/16.jpg": "/zatrokcrow/static/media/16.cade16c14a7dfa71ae7f.jpg",
     "static/media/3.jpg": "/zatrokcrow/static/media/3.4548159bed0922e3f703.jpg",
@@ -35,10 +35,10 @@
     "static/media/next.png": "/zatrokcrow/static/media/next.caef5202b04f526d1294.png",
     "index.html": "/zatrokcrow/index.html",
     "main.fb4e672b.css.map": "/zatrokcrow/static/css/main.fb4e672b.css.map",
-    "main.813124bb.js.map": "/zatrokcrow/static/js/main.813124bb.js.map"
+    "main.efb9eea7.js.map": "/zatrokcrow/static/js/main.efb9eea7.js.map"
   },
   "entrypoints": [
     "static/css/main.fb4e672b.css",
-    "static/js/main.813124bb.js"
+    "static/js/main.efb9eea7.js"
   ]
 }
