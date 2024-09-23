@@ -35,7 +35,7 @@ function Software() {
                     </div>
 
                     <div className="col">
-                        <a target="_blank" href={"https://zatroktamas01.github.io/simon-game/"}><img src={software5} className="gallery-item bg-dark" alt="gallery" /></a>
+                        <a target="_blank" href={"https://zatroktamas01.github.io/SimonGame/"}><img src={software5} className="gallery-item bg-dark" alt="gallery" /></a>
                     </div>
 
                     <div className="button-container">
