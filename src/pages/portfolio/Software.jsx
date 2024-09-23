@@ -2,6 +2,7 @@ import software1 from './software/1.jpg'
 import software2 from './software/2.jpg'
 import software3 from './software/3.jpg'
 import software4 from './software/4.jpg'
+import software5 from './software/5.jpg'
 import { Link } from "react-router-dom";
 
 function Software() {
@@ -31,6 +32,10 @@ function Software() {
 
                     <div className="col">
                         <a target="_blank" href={"https://basic-calculator-02.netlify.app/"}><img src={software4} className="gallery-item bg-dark" alt="gallery" /></a>
+                    </div>
+
+                    <div className="col">
+                        <a target="_blank" href={"https://zatroktamas01.github.io/simon-game/"}><img src={software5} className="gallery-item bg-dark" alt="gallery" /></a>
                     </div>
 
                     <div className="button-container">
