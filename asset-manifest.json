@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/zatrokcrow/static/css/main.fb4e672b.css",
-    "main.js": "/zatrokcrow/static/js/main.efb9eea7.js",
+    "main.js": "/zatrokcrow/static/js/main.f6ef51f2.js",
     "static/media/8.jpg": "/zatrokcrow/static/media/8.732af5244a30f74d420e.jpg",
     "static/media/16.jpg": "/zatrokcrow/static/media/16.cade16c14a7dfa71ae7f.jpg",
     "static/media/3.jpg": "/zatrokcrow/static/media/3.4548159bed0922e3f703.jpg",
     "static/media/2.jpg": "/zatrokcrow/static/media/2.9fc811a70142ecfcee98.jpg",
     "static/media/22.jpg": "/zatrokcrow/static/media/22.e7d40bc177ee3f587f6e.jpg",
     "static/media/12.jpg": "/zatrokcrow/static/media/12.76775042b2172672f48e.jpg",
-    "static/media/5.jpg": "/zatrokcrow/static/media/5.69077d5aef5d6462a6f7.jpg",
+    "static/media/5.jpg": "/zatrokcrow/static/media/5.4bda859d5b09bc067c74.jpg",
     "static/media/20.jpg": "/zatrokcrow/static/media/20.971c453b39d3ec9b9a07.jpg",
     "static/media/1.jpg": "/zatrokcrow/static/media/1.9683da1a240e2c804529.jpg",
     "static/media/11.jpg": "/zatrokcrow/static/media/11.7194e6c449f523fc1bb2.jpg",
@@ -19,7 +19,7 @@
     "static/media/15.jpg": "/zatrokcrow/static/media/15.5a6eed07e61eb13f7ac5.jpg",
     "static/media/25.jpg": "/zatrokcrow/static/media/25.151684266a864fdb45f6.jpg",
     "static/media/19.jpg": "/zatrokcrow/static/media/19.12ff248b6e7e0837fc83.jpg",
-    "static/media/4.jpg": "/zatrokcrow/static/media/4.c1b35e04cc29b1924ede.jpg",
+    "static/media/4.jpg": "/zatrokcrow/static/media/4.568bf4abdb857013ae9e.jpg",
     "static/media/7.jpg": "/zatrokcrow/static/media/7.27cb46c157d2886c5904.jpg",
     "static/media/14.jpg": "/zatrokcrow/static/media/14.bfb9058b61be7f2f8a42.jpg",
     "static/media/23.jpg": "/zatrokcrow/static/media/23.f6a86c531fcfae3376ce.jpg",
@@ -35,10 +35,10 @@
     "static/media/next.png": "/zatrokcrow/static/media/next.caef5202b04f526d1294.png",
     "index.html": "/zatrokcrow/index.html",
     "main.fb4e672b.css.map": "/zatrokcrow/static/css/main.fb4e672b.css.map",
-    "main.efb9eea7.js.map": "/zatrokcrow/static/js/main.efb9eea7.js.map"
+    "main.f6ef51f2.js.map": "/zatrokcrow/static/js/main.f6ef51f2.js.map"
   },
   "entrypoints": [
     "static/css/main.fb4e672b.css",
-    "static/js/main.efb9eea7.js"
+    "static/js/main.f6ef51f2.js"
   ]
 }
