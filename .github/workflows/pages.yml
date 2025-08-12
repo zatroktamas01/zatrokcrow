@@ -1,0 +1,38 @@
+name: Deploy
+on: { push: { branches: [main] } }
+permissions: { contents: read, pages: write, id-token: write }
+concurrency: { group: pages, cancel-in-progress: true }
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: npm ci
+      - run: CI=false npm run build
+      - name: Create 404.html for SPA
+        run: |
+          [ -d dist ] && cp dist/index.html dist/404.html || true
+          [ -d build ] && cp build/index.html build/404.html || true
+      - name: Detect output dir
+        id: detect
+        run: |
+          if [ -d dist ]; then echo "out=dist" >> $GITHUB_OUTPUT;
+          elif [ -d build ]; then echo "out=build" >> $GITHUB_OUTPUT;
+          else echo "No build dir found" && exit 1; fi
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ steps.detect.outputs.out }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
