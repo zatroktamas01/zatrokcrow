@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import design1 from "./design/1.jpg";
-import design2 from "./design/2.jpg";
-import design3 from "./design/3.jpg";
-import design4 from "./design/4.jpg";
-import design5 from "./design/5.jpg";
-import design6 from "./design/6.jpg";
-import design7 from "./design/7.jpg";
-import design8 from "./design/8.jpg";
-import design9 from "./design/9.jpg";
-import design10 from "./design/10.jpg";
-import design11 from "./design/11.jpg";
-import design12 from "./design/12.jpg";
-import design13 from "./design/13.jpg";
-import design14 from "./design/14.jpg";
-import design15 from "./design/15.jpg";
+import design1 from "./design/1.webp";
+import design2 from "./design/2.webp";
+import design3 from "./design/3.webp";
+import design4 from "./design/4.webp";
+import design5 from "./design/5.webp";
+import design6 from "./design/6.webp";
+import design7 from "./design/7.webp";
+import design8 from "./design/8.webp";
+import design9 from "./design/9.webp";
+import design10 from "./design/10.webp";
+import design11 from "./design/11.webp";
+import design12 from "./design/12.webp";
+import design13 from "./design/13.webp";
+import design14 from "./design/14.webp";
+import design15 from "./design/15.webp";
 import { Link } from "react-router-dom";
 
 function Design() {
