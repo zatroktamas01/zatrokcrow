@@ -1,55 +1,49 @@
-/*universal*/
-
-*{
-    font-family: sans-serif;
-    font-weight: 50;
+/* === Base: font stack and default weight across the site === */
+* {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 400;
 }
 
-body{
-    background: #f1fbff;
+/* === Page background color (neutral white for better photo contrast) === */
+body { background: #ffffff; }
+
+/* === Layout safety: avoid horizontal scroll and ensure full-height flow === */
+html, body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden; /* prevent horizontal overflow on small screens */
 }
 
-html, body{
-    width: 100vw;
-    height: 100vh;
-}
+/* === Global image safety: never overflow their containers === */
+img { max-width: 100%; height: auto; }
 
-/*********************************************************************************/
-/*********************************************************************************/
+/* =============================================================================
+   ABOUT SECTION – spacing, text alignment, shared utilities
+   ============================================================================= */
 
-/*about section*/
+/* --- Vertical rhythm for sections --- */
+.section-padding { padding: 100px 0; }
 
-.section-padding {
-    padding: 100px 0;
-  }
-  
-  .about-text {
-    text-align: center;
-  }
-  
-  .about-text p {
-    font-weight: bold;
-  }
-  
-  .imgProfile {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-  }
-  
-  .sizeButton {
-    height: 40px;
-    width: 150px;
-    font-weight: bold;
-  }
-  
-  .sizeButton:hover {
-    border-radius: 10%;
-    color: white;
-    transition: 1s;
-  }
+/* --- Centered copy in the about block --- */
+.about-text { text-align: center; }
 
-/* Icon styles */
+/* --- Make about paragraph a touch bolder for readability --- */
+.about-text p { font-weight: bold; }
+
+/* --- Generic profile image helper (legacy usage) --- */
+.imgProfile { width: 100%; height: auto; margin-top: 20px; }
+
+/* --- Reusable button sizing (used across multiple areas) --- */
+.sizeButton { height: 40px; width: 150px; font-weight: bold; }
+
+/* --- Simple hover treatment for branded buttons --- */
+.sizeButton:hover { border-radius: 10%; color: white; transition: 1s; }
+
+/* =============================================================================
+   SOCIAL ICON BUTTONS – neutral by default, branded on hover
+   ============================================================================= */
+
+/* --- Base icon style (Bootstrap Icons via <button>) --- */
 .large-iconFacebook,
 .large-iconLinkedin,
 .large-iconInstagram,
@@ -59,487 +53,398 @@ html, body{
   background: none;
 }
 
-.large-iconFacebook:hover {
-  background: #4267B2;
-  border-radius: 20%;
-}
+/* --- Brand hovers for each network --- */
+.large-iconFacebook:hover { background: #4267B2; border-radius: 20%; }
+.large-iconLinkedin:hover { background: #0a66c2; border-radius: 20%; }
+.large-iconInstagram:hover { background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7); border-radius: 20%; }
+.large-iconGithub:hover { background: gray; border-radius: 20%; }
 
-.large-iconLinkedin:hover {
-  background: #0a66c2;
-  border-radius: 20%;
-}
+/* =============================================================================
+   ABOUT-ME CARD – modern layout, safe-image variants, features grid
+   ============================================================================= */
 
-.large-iconInstagram:hover {
-  background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
-  border-radius: 20%;
-}
+/* --- Constrain the about block width and center it --- */
+.about-me { max-width: 1100px; margin-inline: auto; }
 
-.large-iconGithub:hover {
-  background: gray;
-  border-radius: 20%;
-}
-
-
-/*********************************************************************************/
-/*********************************************************************************/
-
-/*navbar items*/
-
-
-/*navbar buttons*/ 
-.boldNavMenu{
-    font-weight: bold;
-    color: #000;
-}
-
-.boldNavMenu:hover{
-  color: red;
-  transition: 1s;
-}
-
-.navbar-nav a{
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 500;
-
-}
-
-/*.navbar-brand{
-    text-align: left;
-}*/
-
-.navbar-light .navbar-brand{
-    color: #000;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.custom-container {
-  max-width: 225px; /* Például 1200px szélesség */
-  width: 100%; /* Ez biztosítja, hogy teljes szélességet foglal el kisebb képernyőkön */
-}
-
-
-/*.navbar-light .navbar-brand:focus,
-.navbar-light .navbar-brand:hover{
-    color: #000;
-}*/
-
-/*.navbar-light .navbar-nav .navbar-link{
-    color: #000;
-}*/
-
-/*********************************************************************************/
-/*********************************************************************************/
-
-/*all buttons properties*/
-
-/*.custom-navbar{
-    justify-content: space-between;
-  }*/
-
-.sizeButton{
-    height: 40px;
-    width: 150px;
-    font-weight: bold;
-}
-
-.sizeButton:hover{
-    border-radius: 10%;
-    color: white;
-    transition: 1s;
-}
-
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 20px;
+/* --- Default photo treatment: cover, rounded, shadow, centered --- */
+.about-me .about-photo {
+  display: block;                 /* center horizontally */
   width: 100%;
+  max-width: 640px;               /* upper cap on large screens */
+  margin-inline: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;              /* best for photography */
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.12);
 }
 
-/*********************************************************************************/
-/*********************************************************************************/
-
-/*section separation*/
-
-.section-padding{
-    padding: 100px 0;
+/* --- Logo-friendly variant: never crop, add “letterbox” background --- */
+.about-me .about-photo--logo {
+  object-fit: contain;            /* keep the whole logo visible */
+  background: #000;               /* matches the logo background */
+  padding: 8px;                   /* safe area to avoid edge cuts */
 }
 
-/*********************************************************************************/
-/*********************************************************************************/
+/* --- Headline and supporting copy scale responsively --- */
+.about-me h1 { font-weight: 700; font-size: clamp(28px,3.2vw,40px); margin-bottom: .25rem; }
+.about-me .tagline { font-size: clamp(18px,2.2vw,24px); color: #222; margin-bottom: 1rem; }
+.about-me .intro { font-size: 1rem; line-height: 1.7; color: #333; margin-bottom: 1.25rem; }
+.about-me .intro em { color: #666; }
 
-/*slideshow items (bootstrap 5)*/
+/* --- Two-column feature grid for craft summaries --- */
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px 24px;
+  margin-bottom: 1rem;
+}
 
-/* Carousel items */
+/* --- Single feature item: icon + text --- */
+.about-feature {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  align-items: start;
+  column-gap: 12px;
+}
+
+/* --- Circular-ish icon plate with brand red accent --- */
+.about-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: #ffe9ea;
+  color: #d32f2f;
+  font-size: 18px;
+  line-height: 1;
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+/* --- CTA row spacing (Read More / Get in Touch) --- */
+.about-ctas { gap: 12px; }
+
+/* --- Feature titles and copy tone --- */
+.about-feature h5 { margin: 0 0 4px 0; font-size: 16px; font-weight: 600; color: #222; }
+.about-feature p { margin: 0; font-size: 13.5px; color: #666; }
+
+/* --- Tablet: collapse features to a single column --- */
+@media (max-width: 992px){ .about-features { grid-template-columns: 1fr; } }
+
+/* --- Mobile: square card feel, centered CTAs, extra padding for logos --- */
+@media (max-width: 768px){
+  .about-me .lead { font-size: 1rem; }
+  .about-me .about-photo { aspect-ratio: 1 / 1; }             /* card feel on phones */
+  .about-me .about-photo--logo { padding: 10px; }             /* slightly bigger safe area */
+  .about-ctas { justify-content: center !important; width: 100%; }
+  .about-ctas .btn { flex: 1 1 auto; max-width: 220px; text-align: center; }
+}
+
+/* --- Small phones: slight horizontal padding so nothing touches edges --- */
+@media (max-width: 576px){ .about-me { padding-inline: 12px; } }
+
+/* =============================================================================
+   NAVBAR – basics and hover accents
+   ============================================================================= */
+
+/* --- Bold nav links by default --- */
+.boldNavMenu { font-weight: bold; color: #000; }
+
+/* --- Brand red on hover --- */
+.boldNavMenu:hover { color: red; transition: 1s; }
+
+/* --- Uppercase nav items for structure --- */
+.navbar-nav a { font-size: 15px; text-transform: uppercase; font-weight: 500; }
+
+/* --- Brand mark: larger, tracked, black --- */
+.navbar-light .navbar-brand {
+  color: #000;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* --- Utility container for compact brand/logo blocks --- */
+.custom-container { max-width: 225px; width: 100%; }
+
+/* =============================================================================
+   GENERIC BUTTON UTILITIES
+   ============================================================================= */
+
+/* --- Reaffirm shared size and hover (kept for clarity) --- */
+.sizeButton { height: 40px; width: 150px; font-weight: bold; }
+.sizeButton:hover { border-radius: 10%; color: white; transition: 1s; }
+
+/* --- Center a single button row when needed --- */
+.button-container { display: flex; justify-content: center; align-items: center; bottom: 20px; width: 100%; }
+
+/* =============================================================================
+   SLIDESHOW / CAROUSEL – baseline + hero variant
+   ============================================================================= */
+
+/* --- Baseline: images cover but keep natural height (prevents letterboxing) --- */
+.carousel-item img { object-fit: cover; height: auto; }
+
+/* --- Caption typography (legacy carousel usage) --- */
 .carousel-caption h5 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-  }
-  
-  .carousel-caption {
-    bottom: 50%;
-    transform: translateY(50%);
-    text-align: center;
-  }  
-  
-  .carousel-item img {
-    object-fit: cover;
-    height: 100vh;
-  }
-
-  .custom-carousel-control-prev-icon,
-  .custom-carousel-control-next-icon {
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-  }
-  
-  .custom-carousel-control-prev-icon {
-    background-image: url('./prev.png');
-  }
-  
-  .custom-carousel-control-next-icon {
-    background-image: url('./next.png');
-  }
-
-/*********************************************************************************/
-/*********************************************************************************/
-
-/*portfolio section (software, photography, design)*/
-
-.img{
-    max-width: 100%;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
 }
 
-.gallery{
-    background-color: #dbddf1;
-    padding: 80px 0;
-}
+/* --- Legacy caption positioning (centered vertically) --- */
+.carousel-caption { bottom: 50%; transform: translateY(50%); text-align: center; }
 
-.gallery img{
-    background-color: #ffffff;
-    padding: 15px;
-    width: 100%;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+/* --- Unified custom prev/next icons (SVG/PNG) --- */
+.custom-carousel-control-prev-icon,
+.custom-carousel-control-next-icon {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  filter: invert(1);
+  opacity: 0.8;
+  transition: opacity .3s ease;
 }
+.custom-carousel-control-prev-icon:hover,
+.custom-carousel-control-next-icon:hover { opacity: 1; }
+.custom-carousel-control-prev-icon { background-image: url('./prev.png'); }
+.custom-carousel-control-next-icon { background-image: url('./next.png'); }
 
-/* A galériaképek alapértelmezett mérete */
-.gallery-item {
-  height: auto;
-  cursor: pointer;
-  user-select: none;
-  border-radius: 8px; /* Lekerekített sarkok (opcionális) */
-  object-fit: cover; /* Kép illesztésének beállítása */
-  transition: transform 0.3s ease; /* Finom animáció kattintásra */
-}
-
-.gallery-item:hover {
-  transform: scale(1.05); /* Kép nagyobbítása hover effekt */
-}
-
-/* A képek letöltésének megakadályozása */
-.gallery-item {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* Internet Explorer/Edge */
-  user-select: none;           /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
-
-/* A modális ablak stílusai */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  position: relative;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.modal-image {
-  max-width: 90vw;
-  max-height: 80vh;
+/* --- HERO variant: fixed-height band with subtle overlay and bottom caption --- */
+.hero-slider{ width: 100%; overflow: hidden; background: #000; }
+.hero-carousel .carousel-item{ position: relative; }
+.hero-carousel .carousel-item img{
   display: block;
-  object-fit: contain;
-}
-
-/* Záró gomb hozzáadása (opcionális) */
-.modal-content::before {
-  content: '×';
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 2em;
-  color: black;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-
-
-/*
-.services .card-body i{
-    font-size: 50px;
-}
-*/
-
-.card-body i{
-    font-size: 50px;
-}
-
-.portfolio .card{
-    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-/*********************************************************************************/
-/*********************************************************************************/
-
-/*MeContent*/
-
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
   width: 100%;
-  height: 100vh; /* 100% magasság */
-  overflow: hidden;
+  height: clamp(340px, 60vh, 720px); /* flexible height across viewports */
+  object-fit: cover;
+  object-position: center;
 }
-
-.detel {
-  margin-left: 8%;
-  margin-top: 15%;
-}
-
-.detel button{
-  background: none;
-}
-
-.detel h1 {
-  font-size: 50px;
-  color: #212121;
-  margin-bottom: 20px;
-}
-
-span {
-  color: red;
-}
-
-.detel p {
-  color: #555;
-  line-height: 22px;
-}
-
-.detel a {
-  padding: 10px 18px;
-  text-decoration: none;
-  font-weight: bold;
-  color: black;
-  display: inline-block;
-  margin: 30px 0;
-  border-radius: 5px;
-  margin-bottom: -20px;
-}
-
-.images {
-  display: flex;
-  flex-direction: column;
-  width: 45%;
-  height: 100%; /* Állítsa be úgy, hogy beleférjen a tartályba*/
+.hero-carousel .carousel-item::before{
+  content: "";
   position: absolute;
-  bottom: 0;
-  right: 100px;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.15));
+  pointer-events: none; /* keep controls clickable */
 }
-
-.images img {
-  max-height: 100%; /* Állítsa be úgy, hogy beleférjen a tartályba */
+.hero-carousel .carousel-caption{
   position: absolute;
   left: 50%;
-  bottom: 0;
   transform: translateX(-50%);
-  transition: bottom 1s, left 1s;
+  bottom: clamp(16px, 8vh, 64px);
+  text-align: center;
+}
+.hero-carousel .carousel-caption h5{
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: clamp(20px, 4.5vw, 42px);
+  text-shadow: 0 2px 10px rgba(0,0,0,.6);
 }
 
-.boy {
-  background: none;
+/* =============================================================================
+   PORTFOLIO – gallery grid, hover, lightbox bits
+   ============================================================================= */
+
+/* --- Generic image helper --- */
+.img { max-width: 100%; }
+
+/* --- Section background and spacing --- */
+.gallery { background-color: #dbddf1; padding: 80px 0; }
+
+/* --- Default gallery images: padded cards with soft shadow --- */
+.gallery img {
+  background-color: #ffffff;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
-.shape {
-  width: 1100px;
-  height: 850px; /* A képarány megtartása */
-  background: none;
+/* --- Clickable gallery tiles with lift-on-hover and overlay --- */
+.gallery-item{
+  height:auto; cursor:pointer; user-select:none; border-radius:10px; object-fit:cover;
+  transition: transform .3s ease, box-shadow .3s ease; overflow:hidden; position:relative;
+}
+.gallery-item::after{ content:""; position:absolute; inset:0; background:rgba(0,0,0,0.25); opacity:0; transition:opacity .3s ease; }
+.gallery-item:hover{ transform: translateY(-6px) scale(1.03); box-shadow:0 12px 30px rgba(0,0,0,0.25); }
+.gallery-item:hover::after{ opacity:1; }
+
+/* --- Disable long-press save on mobile (best-effort) --- */
+.gallery-item{
+  -webkit-touch-callout:none; -webkit-user-select:none; -khtml-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;
 }
 
-.images:hover .shape {
-  bottom: 40px;
+/* --- Topbar above grids: title + back button --- */
+.gallery-topbar{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:24px; padding:0 8px; }
+
+/* --- Section heading sizing --- */
+.gallery-heading{ font-size:clamp(22px,3.2vw,32px); margin:0; }
+
+/* --- Back button (high contrast, tappable) --- */
+.steps-back{
+  appearance:none; border:none; cursor:pointer;
+  padding:10px 14px; border-radius:10px; background:#111; color:#fff; font-weight:700; transition:.25s ease; font-size:14px;
+}
+.steps-back:hover{ transform: translateY(-2px); background:#000; }
+
+/* --- Card with image overlay caption (project title/metadata) --- */
+.gallery-card{ margin:0; position:relative; overflow:hidden; border-radius:12px; background:#fff; box-shadow:0 4px 14px rgba(0,0,0,.08); cursor:pointer; }
+.gallery-caption{
+  position:absolute; left:0; right:0; bottom:0; padding:10px 12px; color:#fff; font-size:14px;
+  background:linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0)); display:flex; gap:6px; align-items:center;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
 }
 
-.images:hover .boy {
-  left: 45%;
+/* --- Lightbox modal container --- */
+.modal{
+  position:fixed; top:0; left:0; width:100%; height:100%;
+  background-color:rgba(0,0,0,0.8); display:flex; align-items:center; justify-content:center; z-index:1000;
 }
 
-.detel a:hover{
-  color: red;
-  transition: 1s;
+/* --- Lightbox content panel --- */
+.modal-content{ position:relative; background:white; padding:20px; border-radius:8px; }
+
+/* --- Full-size image within the lightbox --- */
+.modal-image{ max-width:90vw; max-height:80vh; display:block; object-fit:contain; }
+
+/* --- “Close” affordance (×) for click targets --- */
+.modal-content::before{
+  content:'×'; position:absolute; top:10px; right:10px; font-size:2em; color:black; cursor:pointer; z-index:1001;
 }
-/*********************************************************************************/
-/*********************************************************************************/
 
+/* --- Optional round close button (if used) --- */
+.lb-close{
+  position:absolute; top:8px; right:10px; width:40px; height:40px; border:none; border-radius:50%;
+  background:rgba(255,255,255,.15); color:#fff; font-size:26px; cursor:pointer; transition:.2s ease;
+}
+.lb-close:hover{ background:rgba(255,255,255,.28); }
 
-/*responsive css*/
+/* --- Lightbox header (title + meta) --- */
+.lb-header{ margin:6px 46px 10px 6px; color:#fff; }
+.lb-title{ margin:0; font-size:clamp(16px,2.5vw,22px); font-weight:700; }
+.lb-meta{ margin:4px 0 0; font-size:14px; opacity:.9; }
 
+/* --- Lightbox nav controls (prev/next) pinned near bottom --- */
+.lb-controls{
+  position:absolute; inset:auto 0 16px 0; display:flex; justify-content:space-between; pointer-events:none;
+}
+.lb-nav{
+  pointer-events:auto; width:44px; height:44px; border:none; border-radius:50%; background:rgba(255,255,255,.18);
+  color:#fff; font-size:28px; cursor:pointer; transition:.2s ease;
+}
+.lb-nav:hover{ background:rgba(255,255,255,.32); }
 
-/*Navbar*/
+/* =============================================================================
+   HERO (MeContent) – legacy styles for the intro composition
+   ============================================================================= */
 
+/* --- Full-height hero wrapper with overflow hidden --- */
+.hero{
+  display:flex; justify-content:space-between; align-items:center; position:relative; width:100%; height:100vh; overflow:hidden;
+}
 
+/* --- Left column (copy) spacing --- */
+.detel{ margin-left:8%; margin-top:15%; }
+
+/* --- Neutralize default button background in this block --- */
+.detel button{ background:none; }
+
+/* --- Large headline in hero --- */
+.detel h1{ font-size:50px; color:#212121; margin-bottom:20px; }
+
+/* --- Brand red accent for <span> --- */
+span{ color:red; }
+
+/* --- Paragraph line-height for readability --- */
+.detel p{ color:#555; line-height:22px; }
+
+/* --- Hero links look like buttons but remain anchors --- */
+.detel a{
+  padding:10px 18px; text-decoration:none; font-weight:bold; color:black; display:inline-block; margin:30px 0; border-radius:5px; margin-bottom:-20px;
+}
+
+/* --- Right-side stacked images (shape + person) --- */
+.images{
+  display:flex; flex-direction:column; width:45%; height:100%; position:absolute; bottom:0; right:100px;
+}
+
+/* --- Absolute positioning to create layered parallax feel --- */
+.images img{
+  max-height:100%; position:absolute; left:50%; bottom:0; transform:translateX(-50%); transition:bottom 1s, left 1s;
+}
+
+/* --- Transparent helpers for background/person images --- */
+.boy{ background:none; }
+.shape{ width:1100px; height:850px; background:none; }
+
+/* --- Hover micro-animations --- */
+.images:hover .shape{ bottom:40px; }
+.images:hover .boy{ left:45%; }
+
+/* --- Link hover color to brand red --- */
+.detel a:hover{ color:red; transition:1s; }
+
+/* =============================================================================
+   RESPONSIVE TWEAKS – nav, carousel, cards, hero layout
+   ============================================================================= */
+
+/* --- Phones: center nav, tune carousel text, add card spacing --- */
 @media only screen and (max-width: 767px){
-    .navbar-nav{
-        text-align: center;
-    }
-    .carousel-caption{
-        bottom: 130px;
-    }
-    .carousel-caption a{
-        padding: 10px 15px;
-
-    }
-    .carousel-caption p{
-        width: 100%;
-        line-height: 1.6;
-        font-size: 12px;
-    }
-    
-    .card{
-        margin-bottom: 30px;
-    }
+  .navbar-nav{ text-align:center; }
+  .carousel-caption{ bottom:130px; }
+  .carousel-caption a{ padding:10px 15px; }
+  .carousel-caption p{ width:100%; line-height:1.6; font-size:12px; }
+  .card{ margin-bottom:30px; }
 }
 
-/****************************************************/
-
-/*Slider & Portfoliosection*/
-
-@media only screen and (min-width: 768px) {
-    .carousel-caption{
-        bottom: 130px;
-    }
-    .card{
-        margin-bottom: 30px;
-    }
+/* --- Tablets+: legacy carousel offset and card spacing --- */
+@media only screen and (min-width: 768px){
+  .carousel-caption{ bottom:130px; }
+  .card{ margin-bottom:30px; }
 }
 
-/*Slider*/
+/* --- Phones: scale down big carousel headers --- */
+@media (max-width: 768px){
+  .carousel-caption h5{ font-size:1.5rem; margin-top:170px; }
+  .carousel-item img{ height:auto; }
+}
 
-@media (max-width: 768px) {
-    .carousel-caption h5 {
-      font-size: 1.5rem;
-      margin-top: 170px;
-    }
-    .carousel-item img {
-      height: auto;
-    }
-  }
-
-  /* Adjust size for medium screens */
-@media (max-width: 992px) {
+/* --- Icon sizing for medium screens --- */
+@media (max-width: 992px){
   .custom-carousel-control-prev-icon,
-  .custom-carousel-control-next-icon {
-    width: 150px;
-    height: 150px;
-  }
+  .custom-carousel-control-next-icon{ width:150px; height:150px; }
 }
 
-/* Adjust size for small screens */
-@media (max-width: 768px) {
+/* --- Icon sizing for small tablets/large phones --- */
+@media (max-width: 768px){
   .custom-carousel-control-prev-icon,
-  .custom-carousel-control-next-icon {
-    width: 100px;
-    height: 100px;
-  }
+  .custom-carousel-control-next-icon{ width:100px; height:100px; }
 }
 
-/* Adjust size for extra small screens */
-@media (max-width: 576px) {
+/* --- Icon sizing for small phones --- */
+@media (max-width: 576px){
   .custom-carousel-control-prev-icon,
-  .custom-carousel-control-next-icon {
-    width: 80px;
-    height: 80px;
-  }
+  .custom-carousel-control-next-icon{ width:80px; height:80px; }
 }
 
-/****************************************************/
-
-  /*Aboutsection*/
-
-@media (max-width: 992px) {
-    .imgProfile {
-      margin-top: 20px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .about-text {
-      text-align: center;
-    }
-
-    .imgProfile {
-      margin: 20px auto;
-    }
-  }
-
-  /****************************************************/
-
-  /*MeContent*/
-
-  @media only screen and (min-width: 0) and (max-width: 1500px) {
-    .hero {
-        flex-direction: column;
-    }
-
-    .detel{
-      margin-right: 10px;
-    }
-
-    .detel > h1 p{
-      text-align: center;
-    }
-  
-    .images {
-        height: 37%;
-        right: 30%;
-    }
-
-    .images img {
-        transform: translateX(-50%);
-        transition: bottom 1s, left 1s;
-    }
-
-    .shape {
-        width: 500px;
-        height: auto; /* A képarány megtartása */
-    }
+/* --- Legacy about helpers on smaller screens --- */
+@media (max-width: 992px){ .imgProfile{ margin-top:20px; } }
+@media (max-width: 768px){
+  .about-text{ text-align:center; }
+  .imgProfile{ margin:20px auto; }
 }
 
-/*********************************************************************************/
-/*********************************************************************************/
-
-
-
+/* --- Narrow desktops: stack hero columns and scale artwork --- */
+@media only screen and (min-width: 0) and (max-width: 1500px){
+  .hero{ flex-direction:column; }
+  .detel{ margin-right:10px; }
+  .detel > h1 p{ text-align:center; }
+  .images{ height:37%; right:30%; }
+  .images img{ transform:translateX(-50%); transition:bottom 1s, left 1s; }
+  .shape{ width:500px; height:auto; }
+}
